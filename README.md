@@ -17,5 +17,5 @@ php artisan vendor:publish --tag="filament-timepicker-views"
 ```php
 use HusamTariq\FilamentTimePicker\Forms\Components\TimePickerField;
 
-TimePickerField::make('from_hour')->label('time')->format('h:mm tt')->timeFormat('hh:mm:ss.000')->okLabel("Confirm")->cancelLabel("Cancel"),
+TimePickerField::make('from_hour')->label('time')->okLabel("Confirm")->cancelLabel("Cancel"),
 ```
