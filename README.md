@@ -9,7 +9,7 @@
 composer require husam-tariq/filament-timepicker
 ```
 
-publish assets
+publish views
 
 ```sh
 php artisan vendor:publish --tag="filament-timepicker-views"
