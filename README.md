@@ -14,6 +14,13 @@ publish views
 ```sh
 php artisan vendor:publish --tag="filament-timepicker-views"
 ```
+
+publish config
+
+```sh
+php artisan vendor:publish --tag="filament-timepicker-config" 
+```
+
 ```php
 use HusamTariq\FilamentTimePicker\Forms\Components\TimePickerField;
 
