@@ -1,8 +1,8 @@
 {
-    "name": "littlehans8/filament-timepicker",
+    "name": "husam-tariq/filament-timepicker",
     "description": "Filament Time Picker Field",
     "type": "library",
-    "homepage": "https://github.com/LittleHans8/filament-timepicker",
+    "homepage": "https://github.com/husam-tariq/filament-timepicker",
     "require": {
         "php": "^8.0",
         "filament/filament": "*"
@@ -14,8 +14,8 @@
     },
     "authors": [
         {
-            "name": "littlehans",
-            "email": "littlehans8@gmail.com"
+            "name": "husam-tariq",
+            "email": "hu22am1@gmail.com"
         }
     ],
     "extra": {
