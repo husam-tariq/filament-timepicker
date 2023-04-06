@@ -9,7 +9,7 @@
         x-ref="timePicker"
         type="time"
         x-data="mdtimepicker($refs.timePicker,{
-            state:  $wire.entangle('{{ $getStatePath() }}').defer,
+            state:  $wire.{{ $applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')') }},
             config: {
                 okLabel: '{{ $getOkLabel() }}',
                 cancelLabel: '{{ $getCancelLabel() }}',
