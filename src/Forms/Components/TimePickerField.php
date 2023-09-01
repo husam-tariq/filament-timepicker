@@ -2,11 +2,13 @@
 
 namespace HusamTariq\FilamentTimePicker\Forms\Components;
 
+use Carbon\Carbon;
+use Closure;
 use Filament\Forms\Components\Field;
 
 class TimePickerField extends Field
 {
-    protected string $view = 'filament-timepicker::components.time-picker-field';
+    protected string $view = 'filament3-timepicker::components.time-picker-field';
 
     protected string $okLabel = 'Ok';
 
@@ -50,7 +52,7 @@ class TimePickerField extends Field
         return $this->okLabel;
     }
 
-   
+
 
 
 
