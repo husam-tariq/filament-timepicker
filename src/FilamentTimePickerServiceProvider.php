@@ -2,6 +2,7 @@
 
 namespace HusamTariq\FilamentTimePicker;
 
+use Composer\InstalledVersions;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -18,9 +19,11 @@ use HusamTariq\FilamentTimePicker\Testing\TestsFilamentTimePicker;
 
 class FilamentTimePickerServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filament3-timepicker';
+    public static string $name = 'filament-timepicker';
+    private static string $version = 'dev';
 
-    public static string $viewNamespace = 'filament3-timepicker';
+
+    public static string $viewNamespace = 'filament-timepicker';
 
     public function configurePackage(Package $package): void
     {
@@ -33,20 +36,20 @@ class FilamentTimePickerServiceProvider extends PackageServiceProvider
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->publishConfigFile()
-                    ->askToStarRepoOnGitHub('husam-tariq/filament3-timepicker');
+                   // ->publishConfigFile()
+                    ->askToStarRepoOnGitHub('husam-tariq/filament-timepicker');
             });
 
         $configFileName = $package->shortName();
 
-        if (file_exists($package->basePath("/../config/{$configFileName}.php"))) {
+       /*  if (file_exists($package->basePath("/../config/{$configFileName}.php"))) {
             $package->hasConfigFile();
         }
 
         if (file_exists($package->basePath('/../database/migrations'))) {
             $package->hasMigrations($this->getMigrations());
         }
-
+ */
         if (file_exists($package->basePath('/../resources/lang'))) {
             $package->hasTranslations();
         }
@@ -77,21 +80,21 @@ class FilamentTimePickerServiceProvider extends PackageServiceProvider
         FilamentIcon::register($this->getIcons());
 
         // Handle Stubs
-        if (app()->runningInConsole()) {
+       /*  if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
-                    $file->getRealPath() => base_path("stubs/filament3-timepicker/{$file->getFilename()}"),
-                ], 'filament3-timepicker-stubs');
+                    $file->getRealPath() => base_path("stubs/filament-timepicker/{$file->getFilename()}"),
+                ], 'filament-timepicker-stubs');
             }
         }
-
+ */
         // Testing
         Testable::mixin(new TestsFilamentTimePicker());
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return 'husam-tariq/filament3-timepicker';
+        return 'husam-tariq/filament-timepicker';
     }
 
     /**
@@ -99,10 +102,12 @@ class FilamentTimePickerServiceProvider extends PackageServiceProvider
      */
     protected function getAssets(): array
     {
+        static::$version = InstalledVersions::getVersion('husam-tariq/filament-timepicker');
+        $assetId = $this->getAssetPackageName() . static::$version;
         return [
-            // AlpineComponent::make('filament3-timepicker', __DIR__ . '/../resources/dist/components/filament3-timepicker.js'),
-            Css::make('filament3-timepicker-styles', __DIR__ . '/../resources/dist/filament3-timepicker.css'),
-            Js::make('filament3-timepicker-scripts', __DIR__ . '/../resources/dist/filament3-timepicker.js'),
+            // AlpineComponent::make('filament-timepicker', __DIR__ . '/../resources/dist/components/filament-timepicker.js'),
+            Css::make($assetId, __DIR__ . '/../resources/dist/filament-timepicker.css'),
+            Js::make($assetId, __DIR__ . '/../resources/dist/filament-timepicker.js'),
         ];
     }
 
@@ -145,8 +150,6 @@ class FilamentTimePickerServiceProvider extends PackageServiceProvider
      */
     protected function getMigrations(): array
     {
-        return [
-            'create_filament3-timepicker_table',
-        ];
+        return [];
     }
 }

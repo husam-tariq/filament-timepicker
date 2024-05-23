@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class FilamentTimePickerCommand extends Command
 {
-    public $signature = 'filament3-timepicker';
+    public $signature = 'filament-timepicker';
 
     public $description = 'My command';
 

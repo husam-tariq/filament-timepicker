@@ -2,11 +2,11 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament3-timepicker.css --postcss --watch",
-        "dev:scripts": "esbuild resources/js/index.js --bundle --sourcemap=inline --outfile=resources/dist/filament3-timepicker.js --watch",
-        "build:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament3-timepicker.css --postcss --minify && npm run purge",
+        "dev:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament-timepicker.css --postcss --watch",
+        "dev:scripts": "esbuild resources/js/index.js --bundle --sourcemap=inline --outfile=resources/dist/filament-timepicker.js --watch",
+        "build:styles": "npx tailwindcss -i resources/css/index.css -o resources/dist/filament-timepicker.css --postcss --minify && npm run purge",
         "build:scripts": "node bin/build.js",
-        "purge": "filament-purge -i resources/dist/filament3-timepicker.css -o resources/dist/filament3-timepicker.css -v 3.x",
+        "purge": "filament-purge -i resources/dist/filament-timepicker.css -o resources/dist/filament-timepicker.css -v 3.x",
         "dev": "npm-run-all --parallel dev:*",
         "build": "npm-run-all build:*"
     },

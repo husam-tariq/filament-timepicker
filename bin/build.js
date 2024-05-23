@@ -46,5 +46,5 @@ const defaultOptions = {
 compile({
     ...defaultOptions,
     entryPoints: ['./resources/js/index.js'],
-    outfile: './resources/dist/filament3-timepicker.js',
+    outfile: './resources/dist/filament-timepicker.js',
 })
