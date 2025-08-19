@@ -2,17 +2,27 @@
 
 namespace HusamTariq\FilamentTimePicker\Forms\Components;
 
-use Carbon\Carbon;
 use Closure;
+use Filament\Forms\Components\Concerns\HasAffixes;
+use Filament\Forms\Components\Contracts\HasAffixActions;
 use Filament\Forms\Components\Field;
 
-class TimePickerField extends Field
+class TimePickerField extends Field implements HasAffixActions
 {
+    use HasAffixes;
     protected string $view = 'filament-timepicker::components.time-picker-field';
 
     protected string $okLabel = 'Ok';
 
     protected string $cancelLabel = 'Cancel';
+
+
+    protected function setUp(): void
+    {
+        $this->prefixIcon("heroicon-o-clock")
+            ->isPrefixInline(true);
+        parent::setUp();
+    }
 
     /**
      * @param  array  $cancelLabel
