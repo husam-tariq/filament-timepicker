@@ -1,4 +1,10 @@
 @php
+    $fieldWrapperView = $getFieldWrapperView();
+    $id = $getId();
+    $isDisabled = $isDisabled();
+    $extraInputAttributeBag = $getExtraInputAttributeBag();
+    $extraAlpineAttributes = $getExtraAlpineAttributes();
+    $isAutofocused = $isAutofocused();
     $isPrefixInline = $isPrefixInline();
     $isSuffixInline = $isSuffixInline();
     $prefixActions = $getPrefixActions();
@@ -7,10 +13,16 @@
     $suffixActions = $getSuffixActions();
     $suffixIcon = $getSuffixIcon();
     $suffixLabel = $getSuffixLabel();
+    $placeholder = $getPlaceholder();
+    $isReadOnly = $isReadOnly();
+    $isRequired = $isRequired();
 
 @endphp
-<x-dynamic-component :component="$getFieldWrapperView()" :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()"
-    :hint="$getHint()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()" :field="$field">
+<x-dynamic-component
+    :component="$fieldWrapperView"
+    :field="$field"
+    :inline-label-vertical-alignment="\Filament\Support\Enums\VerticalAlignment::Center"
+>
 
     <x-filament::input.wrapper
         :disabled="$isDisabled"
@@ -29,7 +41,22 @@
     >
 
 
-        <input {{ $isDisabled() ? 'disabled' : '' }} type="time" x-ref="timePicker" x-data="mdtimepicker($refs.timePicker, {
+        <input   {{
+                    $extraInputAttributeBag
+                        ->merge($extraAlpineAttributes, escape: false)
+                        ->merge([
+                            'autofocus' => $isAutofocused,
+                            'disabled' => $isDisabled,
+                            'id' => $id,
+                            'placeholder' => $placeholder,
+                            'readonly' => $isReadOnly,
+                            'required' => $isRequired && (! $isConcealed),
+                        ], escape: false)
+                        ->class([
+                            'fi-input',
+                            'fi-input-has-inline-prefix' => $isPrefixInline && (count($prefixActions) || $prefixIcon || filled($prefixLabel)),
+                            'fi-input-has-inline-suffix' => $isSuffixInline && (count($suffixActions) || $suffixIcon || filled($suffixLabel)),
+                        ]) }}  type="time" x-ref="timePicker" x-data="mdtimepicker($refs.timePicker, {
                 okLabel: '{{ $getOkLabel() }}',
                 cancelLabel: '{{ $getCancelLabel() }}',
                 format: 'hh:mm:ss',

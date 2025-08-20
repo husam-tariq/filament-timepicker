@@ -3,13 +3,18 @@
 namespace HusamTariq\FilamentTimePicker\Forms\Components;
 
 use Closure;
-use Filament\Forms\Components\Concerns\HasAffixes;
-use Filament\Forms\Components\Contracts\HasAffixActions;
+use Filament\Forms\Components\Concerns;
 use Filament\Forms\Components\Field;
+use Filament\Schemas\Components\Contracts\HasAffixActions;
+use Filament\Support\Concerns\HasExtraAlpineAttributes;
 
 class TimePickerField extends Field implements HasAffixActions
 {
-    use HasAffixes;
+    use Concerns\HasAffixes;
+    use Concerns\HasExtraInputAttributes;
+    use Concerns\HasPlaceholder;
+    use Concerns\CanBeReadOnly;
+    use HasExtraAlpineAttributes;
     protected string $view = 'filament-timepicker::components.time-picker-field';
 
     protected string $okLabel = 'Ok';
@@ -19,8 +24,7 @@ class TimePickerField extends Field implements HasAffixActions
 
     protected function setUp(): void
     {
-        $this->prefixIcon("heroicon-o-clock")
-            ->isPrefixInline(true);
+        $this->suffixIcon("heroicon-o-clock", true);
         parent::setUp();
     }
 
