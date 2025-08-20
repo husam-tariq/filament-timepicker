@@ -19,8 +19,7 @@ class TimePickerField extends Field implements HasAffixActions
 
     protected function setUp(): void
     {
-        $this->prefixIcon("heroicon-o-clock")
-            ->isPrefixInline(true);
+        $this->suffixIcon("heroicon-o-clock", true);
         parent::setUp();
     }
 

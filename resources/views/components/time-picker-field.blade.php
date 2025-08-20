@@ -7,7 +7,7 @@
     $suffixActions = $getSuffixActions();
     $suffixIcon = $getSuffixIcon();
     $suffixLabel = $getSuffixLabel();
-
+    $isDisabled = $isDisabled();
 @endphp
 <x-dynamic-component :component="$getFieldWrapperView()" :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()"
     :hint="$getHint()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()" :field="$field">
@@ -29,7 +29,7 @@
     >
 
 
-        <input {{ $isDisabled() ? 'disabled' : '' }} type="time" x-ref="timePicker" x-data="mdtimepicker($refs.timePicker, {
+        <input {{ $isDisabled ? 'disabled' : '' }} type="time" x-ref="timePicker" x-data="mdtimepicker($refs.timePicker, {
                 okLabel: '{{ $getOkLabel() }}',
                 cancelLabel: '{{ $getCancelLabel() }}',
                 format: 'hh:mm:ss',
