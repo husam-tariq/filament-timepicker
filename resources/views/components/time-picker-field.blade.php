@@ -47,16 +47,11 @@
                         ->merge([
                             'autofocus' => $isAutofocused,
                             'disabled' => $isDisabled,
-                            'id' => $id,
                             'placeholder' => $placeholder,
                             'readonly' => $isReadOnly,
                             'required' => $isRequired && (! $isConcealed),
                         ], escape: false)
-                        ->class([
-                            'fi-input',
-                            'fi-input-has-inline-prefix' => $isPrefixInline && (count($prefixActions) || $prefixIcon || filled($prefixLabel)),
-                            'fi-input-has-inline-suffix' => $isSuffixInline && (count($suffixActions) || $suffixIcon || filled($suffixLabel)),
-                        ]) }}  type="time" x-ref="timePicker" x-data="mdtimepicker($refs.timePicker, {
+                        }}  type="time" x-ref="timePicker" x-data="mdtimepicker($refs.timePicker, {
                 okLabel: '{{ $getOkLabel() }}',
                 cancelLabel: '{{ $getCancelLabel() }}',
                 format: 'hh:mm:ss',

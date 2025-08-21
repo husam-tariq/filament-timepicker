@@ -1,4 +1,3 @@
-@import '../../vendor/filament/filament/resources/css/theme.css';
 .mdtp__wrapper,
 body[mdtimepicker-display=on] {
     overflow: hidden
@@ -79,7 +78,7 @@ body[mdtimepicker-display=on] {
 .mdtp__clock_holder {
     position: relative;
     padding: 20px;
-    background-color: #fff
+    @apply bg-white dark:bg-[--gray-900];
 }
 
 .mdtp__clock_holder .mdtp__clock {
@@ -88,7 +87,7 @@ body[mdtimepicker-display=on] {
     height: 250px;
     margin-bottom: 20px;
     border-radius: 50%;
-    background-color: #eee
+    @apply bg-[#eee] dark:bg-[--gray-950];
 }
 
 .mdtp__clock .mdtp__am,
@@ -127,7 +126,7 @@ body[mdtimepicker-display=on] {
     --c-500: var(--primary-500);
     --c-600: var(--primary-600);
     color: #fafafa;
-    background-color:rgba(var(--c-600),var(--tw-bg-opacity))
+    background-color: var(--c-600)
 }
 
 .mdtp__clock .mdtp__clock_dot {
@@ -139,7 +138,7 @@ body[mdtimepicker-display=on] {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 4px;
-    background-color: rgba(var(--c-600),var(--tw-bg-opacity));
+    background-color: var(--c-600);
     border-radius: 50%
 }
 
@@ -201,7 +200,7 @@ body[mdtimepicker-display=on] {
     --c-400: var(--primary-400);
     --c-500: var(--primary-500);
     --c-600: var(--primary-600);
-    background-color: rgba(var(--c-600),var(--tw-bg-opacity)) !important;
+    background-color: var(--c-600) !important;
     color: #fff;
     z-index: 2
 }
@@ -218,7 +217,7 @@ body[mdtimepicker-display=on] {
     top: calc(50% - 1px);
     height: 2px;
     width: 100%;
-    background-color: rgba(var(--c-600),var(--tw-bg-opacity))
+    background-color: var(--c-600)
 }
 
 .mdtp__clock .mdtp__minute_holder .mdtp__digit {
@@ -761,9 +760,6 @@ body[mdtimepicker-display=on] {
     cursor: pointer
 }
 
-.mdtp__button:hover {
-    background-color: #e0e0e0
-}
 
 .mdtp__wrapper .mdtp__clock .mdtp__am.active,
 .mdtp__wrapper .mdtp__clock .mdtp__clock_dot,
@@ -772,7 +768,7 @@ body[mdtimepicker-display=on] {
     --c-400: var(--primary-400);
     --c-500: var(--primary-500);
     --c-600: var(--primary-600);
-    background-color: rgba(var(--c-600),var(--tw-bg-opacity))
+    background-color: var(--c-600)
 }
 
 .mdtp__wrapper .mdtp__clock .mdtp__digit span:hover,
@@ -780,14 +776,14 @@ body[mdtimepicker-display=on] {
     --c-400: var(--primary-400);
     --c-500: var(--primary-500);
     --c-600: var(--primary-600);
-    background-color: rgba(var(--c-600),var(--tw-bg-opacity))
+    background-color: var(--c-600)
 }
 
 .mdtp__wrapper .mdtp__digit.active:before {
     --c-400: var(--primary-400);
     --c-500: var(--primary-500);
     --c-600: var(--primary-600);
-    background-color: rgba(var(--c-600),var(--tw-bg-opacity))
+    background-color: var(--c-600)
 }
 
 @media (max-height: 360px) {
