@@ -1,4 +1,4 @@
-# Filament 3.x Time Picker
+# Filament Time Picker
 
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/husam-tariq/filament-timepicker.svg?style=flat-square)](https://packagist.org/packages/husam-tariq/filament-timepicker)
@@ -7,7 +7,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/husam-tariq/filament-timepicker.svg?style=flat-square)](https://packagist.org/packages/husam-tariq/filament-timepicker)
 
 
-![Filament 3.x Time Picker](img/main.jpg)
+![Filament Time Picker](img/main.jpg)
 
 
 ## Installation
