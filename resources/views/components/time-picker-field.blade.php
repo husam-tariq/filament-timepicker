@@ -36,7 +36,7 @@
         :suffix-actions="$suffixActions"
         :suffix-icon="$suffixIcon"
         :suffix-icon-color="$getSuffixIconColor()"
-        :valid="! $errors->has($statePath)"
+        :valid="! $errors->has($getStatePath())"
         :attributes="\Filament\Support\prepare_inherited_attributes($getExtraAttributeBag())"
     >
 
