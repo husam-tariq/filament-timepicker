@@ -1,6 +1,6 @@
 {
     "name": "husam-tariq/filament-timepicker",
-    "description": "Filament 3.x Time Picker",
+    "description": "A time picker field for Filament 5",
     "keywords": [
         "husam-tariq",
         "laravel",
@@ -21,13 +21,13 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "filament/filament": "^5.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
         "nunomaduro/collision": "^8.0.0",
-        "orchestra/testbench": "^8.9.1|^10.0",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
         "pestphp/pest": "^4.4",
         "pestphp/pest-plugin-laravel": "^4.1",
         "pestphp/pest-plugin-livewire": "^4.1"
