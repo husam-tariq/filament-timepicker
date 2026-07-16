@@ -1,6 +1,6 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker\Tests;
+namespace EslamRedaDiv\FilamentTimePicker\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use HusamTariq\FilamentTimePicker\FilamentTimePickerServiceProvider;
+use EslamRedaDiv\FilamentTimePicker\FilamentTimePickerServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -25,7 +25,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'HusamTariq\\FilamentTimePicker\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'EslamRedaDiv\\FilamentTimePicker\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 

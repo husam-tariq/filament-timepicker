@@ -1,6 +1,6 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker\Database\Factories;
+namespace EslamRedaDiv\FilamentTimePicker\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

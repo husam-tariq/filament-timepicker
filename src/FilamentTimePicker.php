@@ -1,6 +1,6 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker;
+namespace EslamRedaDiv\FilamentTimePicker;
 
 class FilamentTimePicker
 {

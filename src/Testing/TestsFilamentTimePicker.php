@@ -1,6 +1,6 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker\Testing;
+namespace EslamRedaDiv\FilamentTimePicker\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
 

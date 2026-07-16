@@ -1,6 +1,6 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker;
+namespace EslamRedaDiv\FilamentTimePicker;
 
 use Composer\InstalledVersions;
 use Filament\Support\Assets\AlpineComponent;
@@ -14,8 +14,8 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use HusamTariq\FilamentTimePicker\Commands\FilamentTimePickerCommand;
-use HusamTariq\FilamentTimePicker\Testing\TestsFilamentTimePicker;
+use EslamRedaDiv\FilamentTimePicker\Commands\FilamentTimePickerCommand;
+use EslamRedaDiv\FilamentTimePicker\Testing\TestsFilamentTimePicker;
 
 class FilamentTimePickerServiceProvider extends PackageServiceProvider
 {
@@ -37,7 +37,7 @@ class FilamentTimePickerServiceProvider extends PackageServiceProvider
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                    // ->publishConfigFile()
-                    ->askToStarRepoOnGitHub('husam-tariq/filament-timepicker');
+                    ->askToStarRepoOnGitHub('eslam-reda-div/timepicker-fork-for-filament-v5');
             });
 
         $configFileName = $package->shortName();
@@ -94,7 +94,7 @@ class FilamentTimePickerServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): ?string
     {
-        return 'husam-tariq/filament-timepicker';
+        return 'eslam-reda-div/timepicker-fork-for-filament-v5';
     }
 
     /**
@@ -102,7 +102,7 @@ class FilamentTimePickerServiceProvider extends PackageServiceProvider
      */
     protected function getAssets(): array
     {
-        static::$version = InstalledVersions::getVersion('husam-tariq/filament-timepicker');
+        static::$version = InstalledVersions::getVersion('eslam-reda-div/timepicker-fork-for-filament-v5');
         $assetId = $this->getAssetPackageName() . static::$version;
         return [
             // AlpineComponent::make('filament-timepicker', __DIR__ . '/../resources/dist/components/filament-timepicker.js'),

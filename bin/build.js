@@ -1,6 +1,9 @@
 import esbuild from 'esbuild'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const isDev = process.argv.includes('--dev')
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
 async function compile(options) {
     const context = await esbuild.context(options)
@@ -14,6 +17,7 @@ async function compile(options) {
 }
 
 const defaultOptions = {
+    absWorkingDir: projectRoot,
     define: {
         'process.env.NODE_ENV': isDev ? `'development'` : `'production'`,
     },
@@ -45,6 +49,6 @@ const defaultOptions = {
 
 compile({
     ...defaultOptions,
-    entryPoints: ['./resources/js/index.js'],
-    outfile: './resources/dist/filament-timepicker.js',
+    entryPoints: [path.join(projectRoot, 'resources/js/index.js')],
+    outfile: path.join(projectRoot, 'resources/dist/filament-timepicker.js'),
 })

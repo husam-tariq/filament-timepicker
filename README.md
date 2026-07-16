@@ -1,11 +1,6 @@
 # Filament Time Picker
 
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/husam-tariq/filament-timepicker.svg?style=flat-square)](https://packagist.org/packages/husam-tariq/filament-timepicker)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/husam-tariq/filament-timepicker/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/husam-tariq/filament-timepicker/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/husam-tariq/filament-timepicker/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/husam-tariq/filament-timepicker/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/husam-tariq/filament-timepicker.svg?style=flat-square)](https://packagist.org/packages/husam-tariq/filament-timepicker)
-
+[![Total Downloads](https://img.shields.io/packagist/dt/eslam-reda-div/timepicker-fork-for-filament-v5.svg?style=flat-square)](https://packagist.org/packages/eslam-reda-div/timepicker-fork-for-filament-v5)
 
 ![Filament Time Picker](img/main.jpg)
 
@@ -15,7 +10,7 @@
 You can install the package via composer:
 
 ```bash
-composer require husam-tariq/filament-timepicker
+composer require eslam-reda-div/timepicker-fork-for-filament-v5
 ```
 
 
@@ -30,7 +25,7 @@ php artisan vendor:publish --tag="filament-timepicker-views"
 ## Usage
 
 ```php
-use HusamTariq\FilamentTimePicker\Forms\Components\TimePickerField;
+use EslamRedaDiv\FilamentTimePicker\Forms\Components\TimePickerField;
 
 TimePickerField::make('from_hour')->label('time')->okLabel("Confirm")->cancelLabel("Cancel"),
 ```

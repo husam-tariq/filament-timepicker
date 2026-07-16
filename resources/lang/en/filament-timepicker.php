@@ -1,6 +1,6 @@
 <?php
 
-// translations for HusamTariq/FilamentTimePicker
+// translations for EslamRedaDiv/FilamentTimePicker
 return [
     //
 ];

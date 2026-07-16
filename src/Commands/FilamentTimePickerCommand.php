@@ -1,6 +1,6 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker\Commands;
+namespace EslamRedaDiv\FilamentTimePicker\Commands;
 
 use Illuminate\Console\Command;
 

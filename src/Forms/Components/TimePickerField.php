@@ -1,6 +1,6 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker\Forms\Components;
+namespace EslamRedaDiv\FilamentTimePicker\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Concerns;

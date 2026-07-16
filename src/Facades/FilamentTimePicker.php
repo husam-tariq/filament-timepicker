@@ -1,16 +1,16 @@
 <?php
 
-namespace HusamTariq\FilamentTimePicker\Facades;
+namespace EslamRedaDiv\FilamentTimePicker\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \HusamTariq\FilamentTimePicker\FilamentTimePicker
+ * @see \EslamRedaDiv\FilamentTimePicker\FilamentTimePicker
  */
 class FilamentTimePicker extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \HusamTariq\FilamentTimePicker\FilamentTimePicker::class;
+        return \EslamRedaDiv\FilamentTimePicker\FilamentTimePicker::class;
     }
 }
