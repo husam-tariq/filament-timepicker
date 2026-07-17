@@ -1,3 +1,5 @@
+@reference '../../vendor/filament/filament/resources/css/theme.css';
+
 .mdtp__wrapper,
 body[mdtimepicker-display=on] {
     overflow: hidden
@@ -78,7 +80,7 @@ body[mdtimepicker-display=on] {
 .mdtp__clock_holder {
     position: relative;
     padding: 20px;
-    @apply bg-white dark:bg-[--gray-900];
+    @apply bg-white dark:bg-(--gray-900);
 }
 
 .mdtp__clock_holder .mdtp__clock {
@@ -87,7 +89,7 @@ body[mdtimepicker-display=on] {
     height: 250px;
     margin-bottom: 20px;
     border-radius: 50%;
-    @apply bg-[#eee] dark:bg-[--gray-950];
+    @apply bg-[#eee] dark:bg-(--gray-950);
 }
 
 .mdtp__clock .mdtp__am,
